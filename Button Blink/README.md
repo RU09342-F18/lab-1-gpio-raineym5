@@ -1,18 +1,10 @@
 # Button Blink
-Now that you have looked at blinking the LED from some built in delay, but what if we wanted to control the state of the LED by a button? You may think "Why would I need a Microcontroller to perform the job of a switch?". And that is where you come in. The bare minimum for this part of the lab is to essentially replicate a switch with your development board.
+This is a straight forward program that simply toggles two on-board LEDs. It was built in CCS version 8.1.0.00011, and the code was compiled using GCC version 7.3.1.24 on Linux
 
-# YOU NEED TO CREATE THE FOLLOWING FOLDERS
-* MSP430G2553
-* MSP(FILL IN THE PROCESSOR YOU ARE USING)
+## MSP430G2553
+For this board, the code sets all GPIO's to outputs to 0, and toggles waits for a button input on pin P1.3. Once the button is pressed, the LED is turned on, and a counter begins incrementing. When the button is released, the counter is stopped. A new counter increments. When the new counter equals the old counter value, the LED is toggled. This provides a 50% duty cycle square wave with a period very close to what was provided by the button (in this case, within 10000 clock cycles). 
 
-## README
-Remember to replace this README with your README once you are ready to submit. I would recommend either making a copy of this file or taking a screen shot. There might be a copy of all of these README's in a folder on the top level depending on the exercise. Make sure you talk about how your button is configured (momentary or continuous. Normally open or closed. Does the button press indicate when the LED should be on or off.)
-
-## Extra Work
-What can we do to make this a little bit more worthy of needing a microcontroller.
-
-### Button Based Speed Control
-Much like the UART controlled speed, what if you could cycle between speeds based on a button press? The speed could progress through a cycle of "Off-Slow-Medium-Fast" looping back when you hit the end.
-
-### Color Change
-What if upon a button press, the LED which was blinking changed. Some of the development boards contain two LEDs, so you could swap between a Red and a Green LED.
+In layman's terms, light blinks and you say how fast.
+## MSP430F5529
+For this board, the code sets all GPIO's to outputs to 0, and toggles waits for a button input on pin P1.1.
+This is done exactly like the program on the MSP430G2553 board, except it toggles an LED on P1.0.
