@@ -7,4 +7,4 @@ This is done by incrementing a counter. When  the counter mod 3 equals 0, it tog
 
 ## MSP430F5529
 For this board, the code sets all GPIO's to outputs to 0, and toggles the on-board LED connected to pin P1.0.
-This is done exactly like the program on the MSP430G2553 board, except it toggles LEDs on P1.0 and p1.6 respectively.
+This is done exactly like the program on the MSP430G2553 board, except it toggles LEDs on P1.0 and p1.6 respectively. 
