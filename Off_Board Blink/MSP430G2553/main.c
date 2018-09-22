@@ -13,7 +13,7 @@ void main(void){
 	P1OUT = 0x00;
 
 	while(1){
-	    P1OUT ^= BIT3;
+	    P1OUT ^= BIT3 | BIT4;
 	    __delay_cycles(1000000);
 
 	}
